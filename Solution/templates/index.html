@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Mars Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron">
+  <h1 class="display-2 text-center">Mission to Mars</h1>
+    <p class="text-center"><a class="btn btn-primary btn-lg center-block" href="/scrape" role="button">Scrape New Data</a></p>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-8">
+    <h2>Latest Mars News</h2>
+    <h5>{{mars_data.mars_news_title.news_title}}</h5>
+    <p>{{mars_data.mars_news_title.news_p}}</p>
+  </div>
+  <div class="col-sm-4">
+    <h2>Mars Weather</h2>
+    <p>{{mars_data.mars_weather.weather}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <h2>Featured Mars Image</h2>
+    <img src={{mars_data.mars_img.featured_image_url}} width="500px" height= "500px">
+  </div>
+  <div class="col-sm-4">
+    <h2>Mars Facts</h2>
+    <table>{{mars_data.mars_facts.mars_html | safe}}</table>
+  </div>
+</div>
+<h2>Mars Hemispheres</h2>
+<div class="row">
+  <div class="col-md-6">
+    <p><strong>{{mars_data.hemisphere_img_urls[0].title}}<strong></p>
+    <img src={{mars_data.hemisphere_image_urls[0].img_url}} width="500px" height= "500px">
+  </div>
+  <div class="col-md-6">
+    <p><strong>{{mars_data.hemisphere_img_urls[1].title}}<strong></p>
+    <img src={{mars_data.hemisphere_img_urls[1].img_url}} width="500px" height= "500px">
+  </div>
+</div>
+  <div class="row">
+   <div class="col-md-6">
+    <p><strong>{{mars_data.hemisphere_img_urls[2].title}}<strong></p>
+    <img src={{mars_data.hemisphere_img_urls[2].img_url}} width="500px" height= "500px">
+  </div>
+   <div class="col-md-6">
+    <p><strong>{{mars_data.hemisphere_img_urls[3].title}}<strong></p>
+    <img src={{mars_data.hemisphere_img_urls[3].img_url}} width="500px" height= "500px">
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
